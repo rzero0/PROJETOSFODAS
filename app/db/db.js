@@ -1,9 +1,9 @@
-var mongo = require("mongodb");
+var mongoose = require("mongodb");
 var assert = require("assert");
 
-var url = "mongodb://localhost:27017/testdb";
+var url = "mongodb://localhost:27017/renadb";
 
-mongo.connect(
+mongoose.connect(
   url,
   function() {
     {
@@ -16,14 +16,14 @@ mongo.connect(
   }
 );
 
-mongo.connection.on("connected", function() {
+mongoose.connection.on("connected", function() {
   console.log("Mongoose connected to " + url);
 });
 
-mongo.connection.on("error", function(err) {
+mongoose.connection.on("error", function(err) {
   console.log("Mongoose connection error: " + err);
 });
 
-mongo.connection.on("disconnected", function() {
+mongoose.connection.on("disconnected", function() {
   console.log("Mongoose disconnected");
 });
