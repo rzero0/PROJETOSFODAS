@@ -1,0 +1,108 @@
+html {
+  font-family: "Niramit", sans-serif;
+  background-color: #1e90ff;
+}
+
+.barraSuperior {
+  background-color: #00008b;
+  width: 100%;
+  position: fixed;
+}
+
+#menu ul {
+  padding: 0px;
+  margin: 0px;
+  background-color: #ededed;
+  list-style: none;
+}
+
+#menu ul li {
+  display: inline;
+}
+
+#menu ul li a {
+  padding: 2px 10px;
+  display: inline-block;
+
+  /* visual do link */
+  background-color: #ededed;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 3px solid #ededed;
+}
+
+#menu ul li a:hover {
+  background-color: #d6d6d6;
+  color: #6d6d6d;
+  border-bottom: 3px solid #ea0000;
+}
+
+.tituloLoja {
+  text-align: center;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.product-filter {
+  display: flex;
+}
+
+.product-filter h1 {
+  flex-grow: 1;
+}
+
+.sort {
+  display: flex;
+}
+
+.collection-sort {
+  display: flex;
+  flex-direction: column;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  padding: 2%;
+  flex-grow: 1;
+  flex-basis: 16%;
+
+  display: flex; /* so child elements can use flexbox stuff too! */
+}
+
+.product-image img {
+  max-width: 100%;
+  width: 150px;
+  height: 200px;
+}
+
+.product-info {
+  margin-top: auto;
+}

@@ -1,0 +1,24 @@
+DB:
+user: admin(INT login, VARCHAR password),
+    client(VARCHAR name, VARCHAR login, VARCHAR password, VARCHAR phone, VARCHAR address);
+
+product: object(id, name, price);
+
+Screens:
+  registration screen, er fuoda..
+  login screen,
+  shopping screen,
+  shopping cart screen.
+
+Functions:
+  client:
+    register in store,
+    login in site,
+    choose products,
+    close buy.
+
+  admin: (admin is already registered in the DB)
+    login in site,
+    add product to site,
+    remove product,
+    change product info
