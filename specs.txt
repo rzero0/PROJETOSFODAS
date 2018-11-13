@@ -2,7 +2,7 @@ DB:
 user: admin(INT login, VARCHAR password),
     client(VARCHAR name, VARCHAR login, VARCHAR password, VARCHAR phone, VARCHAR address);
 
-product: object(id, name, price);
+product: object(VARCHAR name, INT price, VARCHAR description);
 
 Screens:
   registration screen, er fuoda..
