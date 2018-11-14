@@ -1,23 +1,10 @@
-var mongoose = require("mongodb");
-var assert = require("assert");
+const mongoose = require("mongodb");
+const Config = require('../util/config');
 
-var url = "mongodb://localhost:27017/renadb";
-
-mongoose.connect(
-  url,
-  function() {
-    {
-      useNewUrlParser: true;
-    }
-    testdb.clients.insertOne({
-      login: "ehgerente",
-      senha: "gerenteviupapai"
-    });
-  }
-);
+mongoose.connect(Config.DATABASE, { useNewUrlParser: true });
 
 mongoose.connection.on("connected", function() {
-  console.log("Mongoose connected to " + url);
+  console.log("Mongoose connected to " + Config.DATABASE);
 });
 
 mongoose.connection.on("error", function(err) {
